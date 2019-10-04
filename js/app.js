@@ -31,7 +31,7 @@ var loginModal = document.getElementById("login-modal");
 var btn = document.getElementById("login-modal-trigger");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var loginClose = document.getElementById("close")
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -39,7 +39,7 @@ btn.onclick = function() {
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+loginClose.onclick = function() {
   loginModal.style.display = "none";
 };
 
@@ -50,7 +50,22 @@ var registerModal = document.getElementById("register-modal");
 var btn = document.getElementById("register-modal-trigger");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[1];
+var registerClose = document.getElementById('close1')
+
+//forgotpassword
+var forgotModal = document.getElementById("forgot-modal")
+var forgotPassword = document.getElementById("forgotPassword")
+var forgotClose = document.getElementById("close2")
+
+forgotPassword.addEventListener("click", e => {
+  forgotModal.style.display = "flex"
+  loginModal.style.display = "none"
+})
+
+forgotClose.onclick = function(){
+  forgotModal.style.display = "none"
+}
+  
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -60,7 +75,7 @@ btn.onclick = function() {
 //CLOSE ALL MODALS
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+registerClose.onclick = function() {
   registerModal.style.display = "none";
 };
 
@@ -85,11 +100,15 @@ window.onclick = function(event) {
   if (event.target == registerModal) {
     registerModal.style.display = "none";
   }
+  if (event.target == this.forgotModal){
+    this.forgotModal.style.display = "none"
+  }
 };
 document.onkeydown = function(evt) {
   evt = evt || window.event;
   if (evt.key == "Escape") {
     loginModal.click();
     registerModal.click();
+    forgotModal.click();
   }
 };

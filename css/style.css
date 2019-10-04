@@ -126,6 +126,9 @@ main.general-main {
         margin: 1rem 0;
         font-weight: 600;
         color: #4a7de0; }
+        #login-modal .modal-content form a :hover {
+          cursor: pointer;
+          }
       #login-modal .modal-content form button {
         display: flex;
         flex-direction: row;
@@ -279,6 +282,115 @@ main.general-main {
         left: 80%; } }
   #register-modal .close:hover {
     transform: scale(1.2); }
+
+    #forgot-modal .modal-content{
+      background-color: white;
+      position: absolute;
+      top: 8vh;
+      left: 33vw;
+      padding: 0rem 3rem 5rem;
+      width: 30vw;
+      color: #3f3f3f; }
+
+      @media (max-width: 850px) {
+        #forgot-modal .modal-content {
+          width: 80vw;
+          height: 80vh;
+          top: 10vh;
+          left: 8vw;
+          padding: 0rem 1rem; } }
+      #forgot-modal .modal-content h2 {
+        font-weight: 700;
+        text-align: center;
+        margin: 6rem auto 2rem;
+        font-size: 3.5rem; }
+        @media (max-width: 850px) {
+          #forgot-modal .modal-content h2 {
+            font-size: 2.5rem;
+            margin: 4.5rem auto 1.5rem; } }
+      #forgot-modal .modal-content form {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem; }
+        #forgot-modal .modal-content form > * {
+          display: block; }
+        #forgot-modal .modal-content form label {
+          font-size: 1.4rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem; }
+          @media (max-width: 850px) {
+            #forgot-modal .modal-content form label {
+              font-size: 1.2rem; } }
+        #forgot-modal .modal-content form input {
+          padding: 1rem;
+          border-radius: 0.5rem;
+          border: none;
+          border: 0.2rem solid #3f3f3f80;
+          margin-bottom: 2rem;
+          font-size: 1.8rem;
+          font-family: "Raleway", segoe UI, sans-serif; }
+          @media (max-width: 850px) {
+            #forgot-modal .modal-content form input {
+              margin-bottom: 1.3rem;
+              font-size: 1.3rem; } }
+        #forgot-modal .modal-content form .stay-signed {
+          display: grid;
+          grid-template-columns: max-content max-content;
+          column-gap: 1rem;
+          justify-content: center;
+          align-items: center;
+          align-content: center; }
+          #forgot-modal .modal-content form .stay-signed input {
+            margin: auto; }
+        #forgot-modal .modal-content form a {
+          text-align: center;
+          margin: 1rem 0;
+          font-weight: 600;
+          color: #4a7de0; }
+        #forgot-modal .modal-content form button {
+          display: flex;
+          flex-direction: row;
+          padding: 1rem 2rem;
+          font-size: 1.6rem;
+          background-color: #4a7de0;
+          border: none;
+          outline: none;
+          width: 20rem;
+          border-radius: 0.5rem;
+          margin: 2rem auto;
+          cursor: pointer;
+          transition: 0.4s ease-out; }
+          @media (max-width: 850px) {
+            #forgot-modal .modal-content form button {
+              padding: 0.4em 2rem;
+              margin: 1.5em auto; } }
+          #forgot-modal .modal-content form button i {
+            color: white;
+            font-size: 1.3rem;
+            margin: auto; }
+          #forgot-modal .modal-content form button p {
+            flex: 1;
+            color: white; }
+        #forgot-modal .modal-content form button:hover {
+          box-shadow: 0 0 5px 3px rgba(70, 80, 200, 0.4); }
+    #forgot-modal .close {
+      color: #3f3f3f;
+      position: absolute;
+      left: 85%;
+      top: 0;
+      font-size: 5rem;
+      padding: 0;
+      cursor: pointer;
+      width: 5rem;
+      height: 5rem;
+      text-align: center;
+      transition: 0.4s ease-out; }
+      @media (max-width: 850px) {
+        #forgot-modal .close {
+          left: 80%; } }
+    #forgot-modal .close:hover {
+      transform: scale(1.2); }
+    
 
 header.general-header {
   display: flex;
@@ -745,7 +857,8 @@ body {
   @media (max-width: 850px) {
     #dashboard-main {
       grid-template-columns: 1fr;
-      grid-template-areas: "image-welcome" "welcome";
+      grid-template-areas: "image-welcome"
+ "welcome";
       padding: 0 2rem; } }
   #dashboard-main .welcome-message {
     grid-area: welcome; }
@@ -1348,3 +1461,22 @@ main#newitem-main {
         background-position: 2% 47%;
         background-size: 20px 20px;
         padding-left: 30px; }
+        
+        .container{
+
+        }
+        .container p{
+          font-size: 22px;
+        }
+
+        .container label{
+          font-size: 20px !important;
+          font-weight: bold
+        }
+        .container input {
+          font-size: 20px !important;
+        }
+        .container a {
+          color: white !important;
+          font-size: 16px;
+        }

@@ -13,7 +13,8 @@ router.get('/', function (req, res)
 // App routes
 router.route('/login').post(userController.login);
 router.route('/signup').post(userController.signup);
-router.route('/items').get(itemsController.index)
+router.route('/items').get(itemsController.index);
+router.route('/forgot').post(userController.forgot)
 	.post(itemsController.new)
     .patch(itemsController.update)
     .put(itemsController.update)

@@ -163,3 +163,32 @@ const takenEmail = () => {
   }, 3000);
 }
 
+
+	document.getElementById("forgot-button").addEventListener("click", e => 
+{	
+	let email = document.getElementById("register-email").value;
+	let data = { "email": email };
+	fetch(backendUrl + "/api/forgot",
+	{
+		method: 'POST', // *GET, POST, PUT, DELETE, etc.
+		headers: 
+		{
+		  'Content-Type': 'application/json',
+		  'Origin': 'muse-client',
+		  'Authorization': 'Bearer ' + (localStorage.getItem(auth_token) || '')
+		},
+		body: JSON.stringify(data) // body data type must match "Content-Type" header
+	})
+	    .then(data => data.json())
+	    .then(json => 
+	    {
+	    	if (json.code == 420)
+					// alert("Email already exists!");
+					takenEmail();
+			else if (json.data && json.data.token)
+			{
+				useToken(json.data);
+				location.href = "dashboard.html";
+			}
+	    });
+});

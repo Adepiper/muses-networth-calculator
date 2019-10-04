@@ -170,7 +170,7 @@
       <div id="login-modal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="close"><div>&times;</div></div>
+          <div class="close" id="close"><div>&times;</div></div>
           <form name="login" action="">
             <h2 id="loginHeader">Log In</h2>
             <label for="login-email">Email</label>
@@ -186,7 +186,7 @@
             <div class="stay-signed">
               <input id="keep-signed-in" type="checkbox" checked/><label for="keep-signed-in">Keep me signed in</label>
             </div>
-            <a href="404.html">Forgot password?</a>
+            <a id="forgotPassword">Forgot password?</a>
             <button id="login-button">
               <i class="fas fa-unlock"></i>
               <p>
@@ -201,7 +201,7 @@
       <div id="register-modal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="close">&times;</div>
+          <div class="close" id="close1">&times;</div>
           <form name="register" action="">
             <h2 id="registerHeader">Register</h2>
             <label for="register-firstname">Name</label>
@@ -231,7 +231,7 @@
             <div class="stay-signed">
               <input type="checkbox" id="keep-signed-in-reg" checked /><label for="keep-signed-in-reg">Keep me signed in</label>
             </div>
-            <a href="404.html">Forgot password?</a>
+           
             <button id="register-button">
               <i class="fas fa-unlock"></i>
               <p>
@@ -242,6 +242,31 @@
           </form>
         </div>
       </div>
+
+      <div id="forgot-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="close" id="close2">&times;</div>
+          <form name="forgotPassword" action="">
+            <h2 id="forgotpassword">Forgot password</h2>
+            <label for="register-email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="register-email"
+                placeholder="Your email"
+                required
+              />
+
+              <button id="forgot-button">
+                <i class="fas fa-unlock"></i>
+                <p>
+                  Forgot Password
+                </p>
+              </button>
+              </form>
+              </div>
+              </div>
 
       <footer>
         <p>
